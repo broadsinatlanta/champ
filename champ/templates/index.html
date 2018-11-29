@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block title %}
+  Index
+{% endblock %}
+
+{% block main %}
+<!-- JUMBOTRON -->
+<div id="welcome" class="jumbotron">
+
+  <div class="container">
+
+    <h1>Champ Workout Generator</h1>
+    <h4>Get Your Workouts, Without Breaking A Sweat</h4>
+    <hr>
+
+    <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#expModal">Start Here <i class="fas fa-running"></i></button>
+
+  </div>
+
+</div>
+
+<!-- MAIN SECTION -->
+<!-- Welcome Text -->
+
+
+<div id="welcomeText" class="container">
+
+  <div class="row">
+
+    <div id="welcomeHead" class="col-md-4">
+      <h3>
+        Welcome to Champ
+      </h3>
+    </div>
+
+    <div id="welcomeBody" class="col-md-8">
+      <p>
+        Champ is a workout generator that gives you free workout ideas for whatever
+        you want to focus on. From a large, diverse database of exercises, it provides
+        you with a solid foundation to then tweak your workouts around your needs, and
+        learn more about fitness.
+      </p>
+    </div>
+
+  </div>
+
+</div>
+{% endblock %}

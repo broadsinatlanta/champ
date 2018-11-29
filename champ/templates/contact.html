@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+
+{% block title %}
+  Contact
+{% endblock %}
+
+{% block main %}
+<div class="jumbotron" id="thanksJumbo">
+  <h1 class="text-center">Feedback & Enquiries</h1>
+  <h2 class="text-center">Contact Form</h2>
+</div>
+
+<div class="container" id="contactSelect">
+
+  <form action="/contact" method="post" id="contact" class="mx-auto">
+
+    {{ form.hidden_tag() }}
+    <!-- CSRF Token - proctection against hidden attacks-->
+    <div class="form-group">
+      <small class="form-text text-muted">All fields are required <span style="color: red;">*</span></small>
+    </div>
+    <div class="form-inline">
+      <legend>About you</legend>
+      {{ form.name.label(class="sr-only") }}
+      {{ form.name(placeholder="Name", class="form-control mb-1 mr-1") }}
+
+      {{ form.name.label(class="sr-only") }}
+      {{ form.email(placeholder="Email", class="form-control mb-1") }}
+    </div>
+
+    <div class="form-group">
+      <legend>About Champ</legend>
+      {{ form.positive.label(class="sr-only") }}
+      {{ form.positive(placeholder="One thing you like about Champ", class="form-control mb-1") }}
+
+      {{ form.negative.label(class="sr-only") }}
+      {{ form.negative(placeholder="One thing you would improve in Champ", class="form-control mb-1") }}
+    </div>
+
+    <div class="form-group">
+      <legend>Message</legend>
+      {{ form.contactMessage.label(class="sr-only") }}
+      {{ form.contactMessage(placeholder="Enter your message here (max 500 words).", class="form-control", rows=4) }}
+    </div>
+
+    <div class="form-group">
+      <legend>Finally, submit with your overall experience:</legend>
+      {{ form.sentiment() }}
+      {{ form.positiveSubmit.label(class="sr-only") }}
+      <button type="submit" class="btn btn-sm btn-success mb-1" onclick="setSent('Positive')"><i class="fas fa-plus submit"></i> Positive</button>
+
+      {{ form.negativeSubmit.label(class="sr-only") }}
+      <button type="submit" class="btn btn-sm btn-danger mb-1" onclick="setSent('Negative')"><i class="fas fa-minus submit"></i> Negative</button>
+
+      <p class="mb-1 mt-1">Or:</p>
+      <button type="reset" class="btn btn-sm btn-outline-secondary">Reset Form</button>
+    </div>
+
+  </form>
+
+</div>
+{% endblock %}

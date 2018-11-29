@@ -1,0 +1,8 @@
+/misc
+.DS_Store
+/.idea
+/champ/personal.py
+/champ/databaseCreation.py
+/champ/__pycache__
+/champ/static/data/exercises_raw.csv
+/champ/static/data/.Rhistory
