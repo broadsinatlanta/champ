@@ -47,8 +47,8 @@ def designWorkout():
 
     elif exp == "experienced":
 
-        flash("Experienced Configuration Coming Soon!", "info")
-        return render_template("config_b.html", form=form)
+        # flash("Experienced Configuration Coming Soon!", "info")
+        return render_template("config_e.html", form=form)
 
     else:
 
