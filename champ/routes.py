@@ -31,29 +31,7 @@ def index():
 def designWorkout():
     form = ContactForm()
 
-    # Decide which page to be shown
-    exp = request.args.get("exp")
-
-    # Check validity of use
-    if exp is None:
-        flash("Please Use The 'Get Started' Navbar Option To Begin.", "info")
-        return redirect("/")
-
-    # Beginners are shown a different set of options to experienced people,
-    # getting to the page in other ways result in a splash being shown.
-    if exp == "beginner":
-
-        return render_template("config_b.html", form=form)
-
-    elif exp == "experienced":
-
-        # flash("Experienced Configuration Coming Soon!", "info")
-        return render_template("config_e.html", form=form)
-
-    else:
-
-        flash("Please Use The 'Get Started' Navbar Option To Begin.", "info")
-        return render_template("config_b.html", form=form)
+    return render_template("config_b.html", form=form)
 
 
 @app.route("/getWorkout", methods=["GET", "POST"])

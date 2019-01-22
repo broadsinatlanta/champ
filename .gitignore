@@ -6,3 +6,5 @@
 /champ/__pycache__
 /champ/static/data/exercises_raw.csv
 /champ/static/data/.Rhistory
+/champ/templates/config_e.html
+/champ/static/css/experienced.css

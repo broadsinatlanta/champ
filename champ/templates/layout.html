@@ -48,49 +48,16 @@
 
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <!-- <a href="/contact">Feedback <i class="far fa-comment-alt"></i></a> -->
           <a href="/contact"><button class="btn btn-outline-primary" type="button" name="button">Feedback <i class="far fa-comment-alt"></i></button></a>
         </li>
         <li class="nav-item">
-          <button class="btn btn-warning" data-toggle="modal" data-target="#expModal">Get Started <i class="fas fa-running"></i></button>
+          <a href="/config?exp=all"><button class="btn btn-warning" type="button" name="button">Get Started <i class="fas fa-running"></i></button></a>
         </li>
       </ul>
 
     </div>
 
   </nav>
-
-  <!-- MODALS -->
-
-  <!-- GET STARTED -->
-
-  <div class="modal fade" id="expModal" tabindex="-1" role="dialog" aria-labelledby="expModalLabel" aria-hidden="true">
-
-    <div class="modal-dialog modal-dialog-centered" role="document">
-
-      <div class="modal-content">
-
-        <div class="modal-header">
-          <h3 class="modal-title mx-auto" id=expModalLabel>
-            Choose Your Experience Level
-          </h3>
-          <button class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-
-        <div class="modal-body mx-auto">
-          <div class="container" id="expSelect">
-            <a role="button" class="btn btn-success" onclick="urlRedirect('config', 'exp', 'beginner')">Beginner</a>
-            <a role="button" class="btn btn-primary" onclick="urlRedirect('config', 'exp', 'experienced')">Experienced</a>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
 
   <!-- MAIN SECTION -->
   <!-- Flash messages -->
